@@ -4,7 +4,7 @@
 #'
 #' @return  html for feedback string
 #' @export
-monthFeedbackUI <- function(id) {
+month_feedback_ui <- function(id) {
   textOutput(NS(id, "feedback"))
 }
 
@@ -16,7 +16,7 @@ monthFeedbackUI <- function(id) {
 #'
 #' @return  string with month feedback
 #' @export
-monthFeedbackServer <- function(id, month) {
+month_feedback_server <- function(id, month) {
   stopifnot(is.reactive(month))
 
   moduleServer(id, function(input, output, session) {

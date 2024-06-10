@@ -7,7 +7,7 @@ Description: Safe place to try different folder frameworks.
 License: file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Imports:
     shiny
 Suggests:

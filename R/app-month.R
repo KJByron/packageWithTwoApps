@@ -27,13 +27,13 @@ month_app <- function(...) {
       selectInput("month", "What's your favourite month?",
         choices = months)
     ),
-    tabPanel("Feedback", monthFeedbackUI("tab1")),
-    tabPanel("Birthstone", birthstoneUI("tab2"))
+    tabPanel("Feedback", month_feedback_ui("tab1")),
+    tabPanel("Birthstone", birthstone_ui("tab2"))
   )
 
   server <- function(input, output, session) {
-    monthFeedbackServer("tab1", month = reactive(input$month))
-    birthstoneServer("tab2", month = reactive(input$month),
+    month_feedback_server("tab1", month = reactive(input$month))
+    month_birthstone_server("tab2", month = reactive(input$month),
       stone_df = stone_df)
   }
 

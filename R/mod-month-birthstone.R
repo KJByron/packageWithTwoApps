@@ -4,7 +4,7 @@
 #'
 #' @return  html and text string with birthstone summary
 #' @export
-birthstoneUI <- function(id) {
+birthstone_ui <- function(id) {
   p(
     "The birthstone for ", textOutput(NS(id, "month"), inline = TRUE),
     " is ", textOutput(NS(id, "stone"), inline = TRUE)
@@ -20,7 +20,7 @@ birthstoneUI <- function(id) {
 #'
 #' @return outputs for month and stone based on input
 #' @export
-birthstoneServer <- function(id, month, stone_df) {
+month_birthstone_server <- function(id, month, stone_df) {
   stopifnot(is.reactive(month))
 
   moduleServer(id, function(input, output, session) {
