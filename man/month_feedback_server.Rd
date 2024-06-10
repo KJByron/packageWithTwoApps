@@ -2,7 +2,7 @@
 % Please edit documentation in R/mod-month_feedback.R
 \name{month_feedback_server}
 \alias{month_feedback_server}
-\title{serve for month}
+\title{server for month}
 \usage{
 month_feedback_server(id, month)
 }
@@ -15,5 +15,5 @@ month_feedback_server(id, month)
 string with month feedback
 }
 \description{
-serve for month
+server for month
 }
