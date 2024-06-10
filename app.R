@@ -15,7 +15,7 @@ packageWithTwoApps::month_app()
 
 
 ## publish
-# deploy one app at a time, comment out the other
+# deploy one app at a time, comment out func call for any others
 # rsconnect::deployApp(here::here(), appName = "month_app")
 # rsconnect::deployApp(here::here(), appName = "data_app")
 
