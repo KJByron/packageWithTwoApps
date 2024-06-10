@@ -10,8 +10,29 @@ month_feedback_ui(id)
 \item{id}{ID}
 }
 \value{
-html for feedback string
+html for feedback string for a given month
 }
 \description{
 UI for month
+}
+\examples{
+\dontrun{
+  pos_feedback_demo <- function() {
+    ui <- fluidPage(month_feedback_ui("x"))
+    server <- function(input, output, session) {
+      month_feedback_server("x", month = reactive("October"))
+    }
+  shinyApp(ui, server)
+  }
+  pos_feedback_demo()
+  
+  neg_feedback_demo <- function() {
+    ui <- fluidPage(month_feedback_ui("x"))
+    server <- function(input, output, session) {
+      month_feedback_server("x", month = reactive("April"))
+    }
+  shinyApp(ui, server)
+  }
+  neg_feedback_demo()
+}
 }
