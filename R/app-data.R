@@ -4,7 +4,7 @@
 #' @export
 data_app <- function(...) {
 
-  ui <- ui <- fluidPage(
+  ui <- fluidPage(
     selectInput("dataset", label = "Dataset",
       choices = ls("package:datasets")),
     verbatimTextOutput("summary"),
